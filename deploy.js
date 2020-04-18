@@ -73,7 +73,7 @@ function updateRemoteApp() {
 // restart mongodb and node services on the remote server
 function restartRemoteServices() {
   return ssh.execCommand(
-    'cd hackathon-starter/hackathon-starter && sudo service mongod start && pm2 start app.js', {
+    'cd hackathon-starter && sudo service mongod start && pm2 start app.js', {
       cwd: '/home/ubuntu'
   });
 }
